@@ -1,0 +1,9 @@
+# Partition table is designed for 4MB SPI storage.
+# 4MB SPI storage requires adjustments to factory, ota_0, ota_1 and storage partitions.
+# Name,		Type,	SubType,	Offset,	Size, Flags
+nvs,		data,	nvs,		,	24K,
+phy,		data,	phy,		,	8K,
+otadata,	data,	ota,		,	8K,
+factory,	app,	factory,	,	1M,
+config,		data,	spiffs,		,	32K,
+storage,	data,	spiffs,		,	2M,

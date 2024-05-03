@@ -1,0 +1,12 @@
+list(APPEND COMPONENT_ADD_INCLUDEDIRS "${CMAKE_SOURCE_DIR}/include")
+
+list(APPEND COMPONENT_REQUIRES driver)
+list(APPEND COMPONENT_REQUIRES esp_timer)
+list(APPEND COMPONENT_REQUIRES esp_touch)
+list(APPEND COMPONENT_REQUIRES nvs_flash)
+list(APPEND COMPONENT_REQUIRES spiffs)
+
+list(APPEND COMPONENT_SRCS "oasis_main.c")
+list(APPEND COMPONENT_SRCS "oasis_timer.c")
+
+register_component()
